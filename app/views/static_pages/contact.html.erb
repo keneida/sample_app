@@ -1,6 +1,14 @@
-<% provide(:title, 'Contact') %>
-<h1>Contact</h1>
-<p>
-  Contact Ruby on Rails Tutorial about the sample app at the
-  <a href="http://railstutorial.org/contact">contact page</a>.
-</p>
+<% provide(:title, 'Контакты') %>
+<div class="hero-unit">
+	<h2 style="color:#339933">Контакты</h2>
+		<h4 style="color:#339933">Телефоны</h4>
+			<h5>Тел. +7 (495) 646-83-01</h5>
+			<h5>Тел. +7 (499) 261-89-14</h5>
+			<h5>Тел. +7 (495) 798-51-90</h5>
+		<h4 style="color:#339933">Мы находимся по адресу:</h4>
+<%= link_to image_tag("ekomap.png", alt: "Map") %>
+			<p>105082 г. Москва, ул. Б.Почтовая д.30</p>
+<%= link_to "Online Заявка", new_micropost_path , html_options = { class: "btn btn-success btn-large pull-right" } %>
+		<h4 style="color:#339933">Режим работы: 8:00-18:00</h4>
+<%= link_to "Назад", :back, html_options = { class: "btn pull-left" } %>
+</div>

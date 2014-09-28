@@ -11,7 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140804100639) do
+ActiveRecord::Schema.define(version: 20140928115754) do
+
+  create_table "microposts", force: true do |t|
+    t.string   "content"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "client"
+    t.boolean  "check"
+    t.string   "email"
+    t.string   "phone"
+    t.string   "service"
+    t.string   "whatface"
+  end
 
   create_table "users", force: true do |t|
     t.string   "name"

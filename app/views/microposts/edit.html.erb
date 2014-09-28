@@ -1,0 +1,73 @@
+<div class="hero-unit">
+<h4 style="color:green;">Изменить заяву</h4>
+<!--<%= render 'form' %>-->
+
+<%= form_for(@micropost) do |f| %>
+  <% if @micropost.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@micropost.errors.count, "error") %> prohibited this micropost from being saved:</h2>
+
+      <ul>
+      <% @micropost.errors.full_messages.each do |msg| %>
+        <li>
+          <%= msg %>
+        </li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<table class="table table-hover table-bordered">
+  <tr>
+    <td  height=60>
+        <h5>Имя</h5>
+        <%= @micropost.client %>
+    </td>
+    <td>
+        <h5>Электронная почта</h5>
+        <%= f.text_field :email %>
+    </td>
+  </tr>
+  <tr>
+    <td height=200 width=70% rowspan=3>
+        <h5>Сообщение</h5>
+        <%= @micropost.content %>
+    </td>
+    <td  height=60>
+        <h5>Телефон</h5>
+        <%= f.text_field :phone %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+        <h5>Услуга</h5>
+<%= f.select(:service, [['Дезинфекция помещений', 'Дезинфекция помещений'],
+                        ['Дезинфекция и чистка мусоропроводов', 'Дезинфекция и чистка мусоропроводов'],
+                        ['Дезинфекция вентиляционных систем', 'Дезинфекция вентиляционных систем'],
+                        ['Дератизация', 'Дератизация'],
+                        ['Дезинсекция', 'Дезинсекция'],
+                        ['Обработка от плесневого грибка', 'Обработка от плесневого грибка'],
+                        ['Замена частей мусоропровода', 'Замена частей мусоропровода'],
+                        ['Замена почтовых ящиков', 'Замена почтовых ящиков']
+                       ],{ :prompt => "Выберите услугу"}
+                       ) %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <h5>Вы являетесь</h5>
+    </td>
+  </tr>
+</table>
+
+  <div class="actions">
+    <%= f.submit 'Отправить', :class => 'btn btn-primary pull-right' %>
+  </div>
+<% end %>
+
+
+
+
+<%= link_to "Назад", microposts_path, html_options = { class: "btn pull-left" } %>
+</div>
+

@@ -1,0 +1,37 @@
+<div class="hero-unit">
+<h4 style="color:green;">Входящие сообщения</h4>
+
+<table class="table table-hover table-bordered">
+  <thead>
+    <tr>
+      <th>Создано</th>
+      <th>Сопроводительное письмо</th>
+      <th>Клиент</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @microposts.each do |micropost| %>
+      <tr>
+        <td><%= micropost.created_at %></td>
+        <% if micropost.check.blank? %>
+          <td style="color:green"><%= micropost.content[0,100] + "..." %></td>
+        <% else %>
+          <td><%= micropost.content[0,100] + "..." %></td>
+        <% end %>
+        <td><%= micropost.client %></td>
+        <td><%= link_to 'Просмотр', micropost, html_options = { class: "btn btn-mini" } %></td>
+        <td><%= link_to 'Редактировать', edit_micropost_path(micropost), html_options = { class: "btn btn-mini" } %></td>
+        <td><%= link_to 'Удалить', micropost, method: :delete, data: { confirm: 'Вы уверены?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Создать заявку', new_micropost_path, html_options = { class: "btn btn-mini pull-right" } %>
+</div>
