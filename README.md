@@ -1,5 +1,4 @@
-# Перевод Ruby on Rails Tutorial: пример приложения
+# Спасибо Ruby on Rails Tutorial:
+Это пример моего первого приложения.
 
-Это пример приложения для
-[*Ruby on Rails Tutorial*](http://railstutorial.org/)
-by [Майкл Хартл](http://michaelhartl.com/).
+
