@@ -1,0 +1,40 @@
+<% provide(:title, 'Help') %>
+<div class="center hero-unit">
+
+  <-- Button to trigger modal -->
+  <a href="#myModal" role="button" class="btn" data-toggle="modal">Launch demo modal</a>
+
+
+  <p>
+    Get help on the Ruby on Rails Tutorial at the
+    <a href="http://railstutorial.org/help">Rails Tutorial help page</a>.
+    To get help on this sample app, see the
+    <a href="http://railstutorial.org/book">Rails Tutorial book</a>.
+  </p>
+
+  <-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+      <h3 id="myModalLabel">Заявка</h3>
+    </div>
+    <div class="modal-body">
+
+<h1>New micropost</h1>
+
+<%= render 'microposts/form' %>
+
+<%= link_to 'Back', microposts_path %>
+
+    </div>
+    <div class="modal-footer">
+      <button class="btn" data-dismiss="modal" aria-hidden="true">Закрыть</button>
+      <button class="btn btn-primary">Отправить</button>
+    </div>
+  </div>
+
+
+
+</div> <%= link_to 'New Micropost', new_micropost_path %>
+<!-- Button trigger modal -->
+

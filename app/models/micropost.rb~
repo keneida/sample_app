@@ -1,0 +1,11 @@
+class Micropost < ActiveRecord::Base
+validates_presence_of :client, :message => "Заполните поле Имя", length: { maximum: 50 }
+
+validates_presence_of :content, :message => "Заполните поле Сообщение"
+
+VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+validates :email, :email: true
+                  :message => "Проверьте поле Электронная почта"
+
+validates_presence_of :email, :message => "Заполните поле Электронная почта"
+end

@@ -1,0 +1,23 @@
+<div class="hero-unit">
+	<table class="table table-hover table-bordered">
+		<tr>
+			<td width=70%>
+				<strong>Имя:</strong>
+				<%= @micropost.client %>
+				<h5>Сообщение:</h5>
+				<%= @micropost.content %>
+			</td>
+			<td>
+				<h5>Электронная почта:</h5>
+				<%= @micropost.email %>
+				<h5>Телефон:</h5>
+				<%= @micropost.phone %>
+				<h5>Услуга:</h5>
+				<%= @micropost.service %>
+				<h5>Это обращение от:</h5>
+				<%= @micropost.whatface %>
+			</td>
+		</tr>
+	</table>
+	<%= link_to 'Назад', microposts_path %>
+</div>

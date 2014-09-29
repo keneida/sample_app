@@ -1,0 +1,9 @@
+<footer>
+<p style="float:left; color:66CCFF">© 2014 OOO "Эко-Дез", все права защищены.</p>
+  <nav>
+    <ul>
+      <li><%= link_to "О нас", about_path, html_options = { class: "btn btn-mini btn-info" } %></li>
+      <li><%= link_to "Контакты", contact_path, html_options = { class: "btn btn-mini btn-info" } %></li>
+    </ul>
+  </nav>
+</footer>

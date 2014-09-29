@@ -1,0 +1,5 @@
+<div class="center hero-unit">
+	<h4 style="color:green;"><%= link_to 'Online Заявка', microposts_path %></h4>
+	<%= link_to "Назад", :back, html_options = { class: "btn pull-left" } %>
+</div>
+

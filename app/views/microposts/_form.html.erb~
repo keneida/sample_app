@@ -1,0 +1,44 @@
+<%= form_for(@micropost) do |f| %>
+	<% if @micropost.errors.any? %>
+		<div id="error_explanation">
+
+		<% if @micropost.errors.any? %>
+			<% @micropost.errors.messages.each do |message| %>
+				<div class="message"><%= message.last.last.html_safe %></div>
+			<% end %>
+		<% end %>
+		</div>
+	<% end %>
+
+	<table class="table table-hover table-bordered">
+		<tr>
+			<td width=70%>
+				<%= f.text_field :client, placeholder: 'Имя*' %>
+				<%= f.text_area(:content, size: "24x12", placeholder: 'Сообщение*') %>
+			</td>
+			<td>
+				<%= f.text_field :email, placeholder: 'Электронная почта*' %>
+				<%= f.text_field :phone, placeholder: 'Телефон' %>
+				<%= f.select(:service, [['Дезинфекция помещений', 'Дезинфекция помещений'],
+							['Дезинфекция и чистка мусоропроводов', 'Дезинфекция и чистка мусоропроводов'],
+							['Дезинфекция вентиляционных систем', 'Дезинфекция вентиляционных систем'],
+							['Дератизация', 'Дератизация'],
+							['Дезинсекция', 'Дезинсекция'],
+							['Обработка от плесневого грибка', 'Обработка от плесневого грибка'],
+							['Замена частей мусоропровода', 'Замена частей мусоропровода'],
+							['Замена почтовых ящиков', 'Замена почтовых ящиков']
+							],{ :prompt => "Выберите услугу"}
+							) %>
+				<p>Это обращение от:</p>
+				<%= f.radio_button(:whatface, "Юр. Лица") %><span>Юридического Лица</span><br>
+				<%= f.radio_button(:whatface, "Физ. Лица") %><span>Физизического Лица</span>
+
+			</td>
+		</tr>
+	</table>
+
+	<div class="actions">
+		<%= f.submit 'Отправить', :class => 'btn btn-primary pull-right' %>
+	</div>
+<% end %>
+
