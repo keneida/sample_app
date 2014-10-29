@@ -6,7 +6,16 @@ SampleApp::Application.routes.draw do
   match '/help',    to: 'static_pages#help',    via: 'get'
   match '/about',   to: 'static_pages#about',   via: 'get'
   match '/contact', to: 'static_pages#contact', via: 'get'
-  match '/damagers', to: 'static_pages#damagers', via: 'get'
+  match '/vrediteli', to: 'static_pages#vrediteli', via: 'get'
+  match '/sredstva', to: 'static_pages#sredstva', via: 'get'
+  match '/dzp', to: 'static_pages#dzp', via: 'get'
+  match '/dzicm', to: 'static_pages#dzicm', via: 'get'
+  match '/dzvs', to: 'static_pages#dzvs', via: 'get'
+  match '/drt', to: 'static_pages#drt', via: 'get'
+  match '/dzs', to: 'static_pages#dzs', via: 'get'
+  match '/oopg', to: 'static_pages#oopg', via: 'get'
+  match '/zcm', to: 'static_pages#zcm', via: 'get'
+  match '/zpy', to: 'static_pages#zpy', via: 'get'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

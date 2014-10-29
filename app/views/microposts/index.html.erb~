@@ -5,7 +5,7 @@
   <thead>
     <tr>
       <th>Создано</th>
-      <th>Сопроводительное письмо</th>
+      <th>Письмо</th>
       <th>Клиент</th>
       <th></th>
       <th></th>
@@ -25,7 +25,7 @@
         <td><%= micropost.client %></td>
         <td><%= link_to 'Просмотр', micropost, html_options = { class: "btn btn-mini" } %></td>
         <td><%= link_to 'Редактировать', edit_micropost_path(micropost), html_options = { class: "btn btn-mini" } %></td>
-        <td><%= link_to 'Удалить', micropost, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Удалить', micropost, method: :delete, data: { confirm: 'Вы уверены?' } %></td>
       </tr>
     <% end %>
   </tbody>
